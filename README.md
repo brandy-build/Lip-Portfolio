@@ -1,14 +1,14 @@
 # 🌟 Prajwal Chawda - Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://brandy-build.github.io/Lip-Portfolio/)
-[![Tech Stack](https://img.shields.io/badge/Tech-HTML%20|%20CSS%20|%20JavaScript%20|%20Supabase-blue)](#tech-stack)
+[![Tech Stack](https://img.shields.io/badge/Tech-HTML%20|%20CSS%20|%20JavaScript-blue)](#tech-stack)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> A modern, terminal-themed portfolio website with glassmorphism design and real-time backend integration.
+> A modern, terminal-themed portfolio website with glassmorphism design and smooth animations.
 
 ## 🎯 **Overview**
 
-Professional portfolio showcasing cybersecurity expertise, Python development skills, and project experience. Features a sleek dark terminal aesthetic with interactive elements and comprehensive backend integration.
+Professional portfolio showcasing cybersecurity expertise, Python development skills, and project experience. Features a sleek dark terminal aesthetic with interactive elements and smooth animations.
 
 ## ✨ **Features**
 
@@ -20,46 +20,40 @@ Professional portfolio showcasing cybersecurity expertise, Python development sk
 - **Smooth Animations** - Scroll-triggered reveal effects
 
 ### 🛠️ **Functionality**
-- **Contact Form** - Real-time submission with backend storage
-- **Analytics Tracking** - Page views and interaction monitoring
-- **Admin Dashboard** - Portfolio management interface
-- **Live Monitoring** - Real-time visitor tracking with alerts
+- **Contact Form** - Frontend validation and user feedback
+- **Interactive Elements** - Smooth animations and hover effects
 - **Project Showcase** - Interactive project cards with external links
-- **Skills Visualization** - Dynamic skill rating system
+- **Skills Visualization** - Dynamic skill progress bars
+- **Responsive Design** - Optimized for all devices
 
-### 🔒 **Backend Integration**
-- **Supabase Database** - PostgreSQL with Row Level Security
-- **Real-time Updates** - Live data synchronization
-- **Authentication** - Secure admin access
-- **Data Analytics** - Visitor statistics and engagement metrics
+### 🔒 **Frontend Features**
+- **Pure JavaScript** - No external dependencies
+- **Responsive Design** - Mobile-first approach
+- **Smooth Animations** - CSS3 and JavaScript animations
+- **Modern ES6** - Clean, modular code structure
 
 ## 🚀 **Tech Stack**
 
-| Frontend | Backend | Database | Security |
-|----------|---------|----------|----------|
-| HTML5 | Supabase | PostgreSQL | RLS Policies |
-| CSS3 | REST API | Real-time DB | Authentication |
-| JavaScript ES6 | WebSockets | Cloud Storage | Data Encryption |
+| Frontend | Styling | Animations | Icons |
+|----------|---------|------------|-------|
+| HTML5 | CSS3 | JavaScript ES6 | Font Awesome |
+| Semantic HTML | Flexbox/Grid | Intersection Observer | JetBrains Mono Font |
+| Responsive Design | CSS Variables | Smooth Scrolling | Modern UI/UX |
 
 ### **External Libraries**
 - **Font Awesome** - Icon system
 - **JetBrains Mono** - Terminal-style typography
-- **Supabase JS Client** - Backend integration
 
 ## 📁 **Project Structure**
 
 ```
 Lip-Portfolio/
 ├── index.html              # Main portfolio page
-├── admin.html              # Admin dashboard
-├── monitor.html            # Live visitor monitoring
 ├── style.css               # Terminal-themed styling
 ├── script.js               # Interactive functionality
-├── supabase-config.js      # Backend configuration
-├── notifications.js        # Real-time alert system
-├── database-schema.sql     # Database setup
 ├── profile.jpeg            # Profile image
-├── SUPABASE_SETUP.md       # Backend setup guide
+├── deploy-to-github.md     # Deployment guide
+├── deploy.bat              # Deployment script
 └── README.md              # Project documentation
 ```
 
@@ -70,31 +64,14 @@ Lip-Portfolio/
 ### **Portfolio Sections**
 1. **Home** - Hero section with terminal introduction
 2. **About** - Professional background and expertise
-3. **Skills** - Technical proficiencies with interactive ratings
+3. **Skills** - Technical proficiencies with animated progress bars
 4. **Projects** - Showcase of cybersecurity and development work
-5. **Contact** - Real-time contact form with backend integration
-
-## 🔍 **Real-time Monitoring**
-
-### **Live Visitor Tracking**
-- **Monitor Dashboard** - `monitor.html` provides real-time visitor analytics
-- **Browser Notifications** - Instant alerts for contact form submissions
-- **Sound Alerts** - Audio notifications for new visitors
-- **Active User Count** - Track concurrent visitors
-- **Geographic Insights** - IP-based visitor location data
-
-### **Alert Systems**
-- **Contact Form Alerts** - Immediate notification when someone reaches out
-- **Visitor Activity** - Real-time page view tracking
-- **Project Interest** - Monitor which projects get the most attention
-- **Email Integration** - Webhook support for email notifications
-- **Discord/Slack** - Team messaging integration for important events
+5. **Contact** - Interactive contact form with validation
 
 ## 🛠️ **Setup & Development**
 
 ### **Prerequisites**
 - Modern web browser
-- Supabase account (for backend features)
 - Git (for deployment)
 
 ### **Local Development**
@@ -112,32 +89,29 @@ Lip-Portfolio/
    xdg-open index.html  # Linux
    ```
 
-3. **Backend Setup** (Optional)
-   - Follow instructions in `SUPABASE_SETUP.md`
-   - Configure database using `database-schema.sql`
-   - Update credentials in `supabase-config.js`
-
 ## 📊 **Features Showcase**
 
-### **Contact Form Integration**
+### **Interactive Contact Form**
 ```javascript
-// Real-time form submission with backend storage
-const portfolioDb = new PortfolioDatabase();
-await portfolioDb.saveContactSubmission(formData);
+// Frontend form validation and user feedback
+function handleContactForm(e) {
+   e.preventDefault();
+   // Validation and user feedback
+   showNotification('Message received! I will get back to you soon.', 'success');
+}
 ```
 
-### **Analytics Tracking**
+### **Smooth Animations**
 ```javascript
-// Automatic page view tracking
-await portfolioDb.trackPageView('home');
-await portfolioDb.trackProjectInteraction('github-project', 'github');
+// Scroll-triggered animations using Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+   entries.forEach(entry => {
+      if (entry.isIntersecting) {
+         entry.target.classList.add('visible');
+      }
+   });
+});
 ```
-
-### **Admin Dashboard**
-- Contact submission management
-- Visitor analytics and statistics
-- Real-time data updates
-- Secure authentication system
 
 ## 🎨 **Design Philosophy**
 

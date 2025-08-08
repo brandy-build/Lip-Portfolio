@@ -14,19 +14,6 @@
 </head>
 
 <body>
-   <!-- Supabase Configuration -->
-   <script type="module">
-      // Import and initialize Supabase
-      import { portfolioDb, realtimeFeatures, portfolioAuth } from './supabase-config.js';
-
-      // Make available globally for other scripts
-      window.portfolioDb = portfolioDb;
-      window.realtimeFeatures = realtimeFeatures;
-      window.portfolioAuth = portfolioAuth;
-
-      // Track initial page load
-      portfolioDb.trackPageView('home');
-   </script>
    <!-- Navigation Sidebar -->
    <nav class="navbar" id="navbar">
       <div class="nav-header">
