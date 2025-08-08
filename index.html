@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Prajwal L Chawda - Cybersecurity Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+   <!-- Supabase Configuration -->
+   <script type="module">
+      // Import and initialize Supabase
+      import { portfolioDb, realtimeFeatures, portfolioAuth } from './supabase-config.js';
+
+      // Make available globally for other scripts
+      window.portfolioDb = portfolioDb;
+      window.realtimeFeatures = realtimeFeatures;
+      window.portfolioAuth = portfolioAuth;
+
+      // Track initial page load
+      portfolioDb.trackPageView('home');
+   </script>
+   <!-- Navigation Sidebar -->
+   <nav class="navbar" id="navbar">
+      <div class="nav-header">
+         <div class="terminal-icon">
+            <i class="fas fa-terminal"></i>
+         </div>
+         <span class="nav-title">Lip's Portfolio</span>
+      </div>
+      <ul class="nav-menu">
+         <li><a href="#home" class="nav-link">
+               <i class="fas fa-home"></i>
+               <span>Home</span>
+            </a></li>
+         <li><a href="#about" class="nav-link">
+               <i class="fas fa-user"></i>
+               <span>About</span>
+            </a></li>
+         <li><a href="#skills" class="nav-link">
+               <i class="fas fa-code"></i>
+               <span>Skills</span>
+            </a></li>
+         <li><a href="#projects" class="nav-link">
+               <i class="fas fa-folder"></i>
+               <span>Projects</span>
+            </a></li>
+         <li><a href="#contact" class="nav-link">
+               <i class="fas fa-envelope"></i>
+               <span>Contact</span>
+            </a></li>
+      </ul>
+   </nav>
+
+   <!-- Main Content -->
+   <main class="main-content">
+      <!-- Home Section -->
+      <section id="home" class="section home-section">
+         <div class="terminal-window">
+            <div class="terminal-header">
+               <div class="terminal-buttons">
+                  <span class="btn close"></span>
+                  <span class="btn minimize"></span>
+                  <span class="btn maximize"></span>
+               </div>
+               <div class="terminal-title">user@portfolio:~$</div>
+            </div>
+            <div class="terminal-body">
+               <div class="terminal-line">
+                  <span class="prompt">$</span>
+                  <span class="command">whoami</span>
+               </div>
+               <div class="terminal-output">
+                  <h1 class="typewriter">Cybersecurity Enthusiast</h1>
+                  <p class="terminal-description">Welcome to Lip's digital workspace</p>
+               </div>
+               <div class="terminal-line">
+                  <span class="prompt">$</span>
+                  <span class="command cursor">_</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about-section">
+         <div class="container">
+            <h2 class="section-title">
+               <span class="prompt">$</span> cat about.md
+            </h2>
+            <div class="about-content">
+               <div class="profile-container">
+                  <div class="profile-shield">
+                     <img src="profile.jpeg" alt="Prajwal L Chawda Profile Picture" class="profile-img">
+                  </div>
+               </div>
+               <div class="about-text">
+                  <div class="terminal-window">
+                     <div class="terminal-header">
+                        <div class="terminal-buttons">
+                           <span class="btn close"></span>
+                           <span class="btn minimize"></span>
+                           <span class="btn maximize"></span>
+                        </div>
+                        <div class="terminal-title">about.md</div>
+                     </div>
+                     <div class="terminal-body">
+                        <p>Hello! I'm Prajwal L Chawda, also known as Lip. I'm a passionate cybersecurity enthusiast
+                           currently pursuing my degree at Garden City University (2022-2026) with a CGPA of 8.75.</p>
+                        <p>I have a keen interest in exploring and learning about new technologies, especially in the
+                           cybersecurity domain. When I'm not securing systems, you can find me developing automation
+                           tools, contributing to open-source projects, or sharing knowledge with the tech community.
+                        </p>
+                        <div class="education-section">
+                           <h4 style="color: var(--text-primary); margin: 1rem 0 0.5rem 0;">🎓 Education &
+                              Certifications:</h4>
+                           <ul style="color: var(--text-secondary); margin: 0 0 1rem 1rem;">
+                              <li>Garden City University (2022-2026) - CGPA: 8.75</li>
+                              <li>CCNA Certification - NetAcad 2025</li>
+                              <li>Python NDG - NetAcad</li>
+                              <li>Hactify Cybersecurity Internship Certificate</li>
+                           </ul>
+                           <a href="https://drive.google.com/file/d/1wo2vRVixnG3isgXHTZPuAIiJj0F-uHwd/view?usp=sharing"
+                              target="_blank"
+                              style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--text-primary); color: var(--bg-primary); text-decoration: none; border-radius: 4px; font-size: 0.9rem; margin-top: 0.5rem;">
+                              <i class="fas fa-download"></i>
+                              Download CV
+                           </a>
+                        </div>
+                        <div class="stats">
+                           <div class="stat-item">
+                              <span class="stat-number">2+</span>
+                              <span class="stat-label">Years Experience</span>
+                           </div>
+                           <div class="stat-item">
+                              <span class="stat-number">25+</span>
+                              <span class="stat-label">Projects Completed</span>
+                           </div>
+                           <div class="stat-item">
+                              <span class="stat-number portfolio-views">---</span>
+                              <span class="stat-label">Portfolio Views</span>
+                           </div>
+                           <div class="stat-item">
+                              <span class="stat-number">100%</span>
+                              <span class="stat-label">Security Focused</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section skills-section">
+         <div class="container">
+            <h2 class="section-title">
+               <span class="prompt">$</span> ls -la skills/
+            </h2>
+            <div class="skills-grid">
+               <div class="skill-category">
+                  <h3>Cybersecurity</h3>
+                  <div class="skills-list">
+                     <div class="skill-item">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Nmap</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-bug"></i>
+                        <span>Burp Suite</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Metasploit</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-wifi"></i>
+                        <span>Wireshark</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 78%;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="skill-category">
+                  <h3>Development</h3>
+                  <div class="skills-list">
+                     <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <span>Frontend/Backend</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 72%;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="skill-category">
+                  <h3>DevOps & Tools</h3>
+                  <div class="skills-list">
+                     <div class="skill-item">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-infinity"></i>
+                        <span>CI/CD</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 68%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span>VS Code</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="skill-category">
+                  <h3>Design & Others</h3>
+                  <div class="skills-list">
+                     <div class="skill-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Figma</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Framer</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fab fa-slack"></i>
+                        <span>Slack</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                     </div>
+                     <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                        <div class="skill-bar">
+                           <div class="skill-progress" style="width: 88%;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section projects-section">
+         <div class="container">
+            <h2 class="section-title">
+               <span class="prompt">$</span> find . -name "*.project" -type f
+            </h2>
+            <div class="projects-grid">
+               <div class="project-card">
+                  <div class="project-header">
+                     <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                     </div>
+                     <h3>AutoHawk Orchestrator</h3>
+                  </div>
+                  <div class="project-body">
+                     <p>An intelligent AI-powered orchestration platform for automated cybersecurity workflows and
+                        threat detection. Currently in active development with advanced automation capabilities.</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">MongoDB</span>
+                     </div>
+                  </div>
+                  <div class="project-footer">
+                     <a href="https://github.com/brandy-build/AutoHawk-orchestrator" target="_blank"
+                        class="project-link">
+                        <i class="fab fa-github"></i>
+                        View Code
+                     </a>
+                     <span class="project-status" style="color: var(--accent-color); font-size: 0.8rem;">🚧 In
+                        Development</span>
+                  </div>
+               </div>
+
+               <div class="project-card">
+                  <div class="project-header">
+                     <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                     </div>
+                     <h3>DNS Resolver Tool</h3>
+                  </div>
+                  <div class="project-body">
+                     <p>A comprehensive DNS resolution and analysis tool built for cybersecurity professionals. Features
+                        advanced DNS enumeration and security assessment capabilities.</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DNS</span>
+                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">Security</span>
+                     </div>
+                  </div>
+                  <div class="project-footer">
+                     <a href="https://github.com/brandy-build" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i>
+                        View Code
+                     </a>
+                  </div>
+               </div>
+
+               <div class="project-card">
+                  <div class="project-header">
+                     <div class="project-icon">
+                        <i class="fas fa-brain"></i>
+                     </div>
+                     <h3>Orchestrator AI</h3>
+                  </div>
+                  <div class="project-body">
+                     <p>An intelligent AI system designed to orchestrate and automate complex cybersecurity operations.
+                        Integrates multiple security tools for comprehensive threat management.</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">APIs</span>
+                        <span class="tech-tag">Automation</span>
+                     </div>
+                  </div>
+                  <div class="project-footer">
+                     <a href="https://github.com/brandy-build" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i>
+                        View Code
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact-section">
+         <div class="container">
+            <h2 class="section-title">
+               <span class="prompt">$</span> grep -r "contact" ./
+            </h2>
+            <div class="contact-content">
+               <div class="contact-info">
+                  <div class="terminal-window">
+                     <div class="terminal-header">
+                        <div class="terminal-buttons">
+                           <span class="btn close"></span>
+                           <span class="btn minimize"></span>
+                           <span class="btn maximize"></span>
+                        </div>
+                        <div class="terminal-title">contact.txt</div>
+                     </div>
+                     <div class="terminal-body">
+                        <div class="contact-item">
+                           <i class="fas fa-envelope"></i>
+                           <div>
+                              <h4>Email</h4>
+                              <p>chawda7prajwal@gmail.com</p>
+                           </div>
+                        </div>
+                        <div class="contact-item">
+                           <i class="fab fa-linkedin"></i>
+                           <div>
+                              <h4>LinkedIn</h4>
+                              <p>linkedin.com/in/prajwal-l-chawda-9b4685254/</p>
+                           </div>
+                        </div>
+                        <div class="contact-item">
+                           <i class="fab fa-github"></i>
+                           <div>
+                              <h4>GitHub</h4>
+                              <p>github.com/brandy-build</p>
+                           </div>
+                        </div>
+                        <div class="contact-item">
+                           <i class="fas fa-university"></i>
+                           <div>
+                              <h4>University</h4>
+                              <p>Garden City University</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="contact-form">
+                  <form class="terminal-form">
+                     <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                     </div>
+                     <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer-content">
+            <div class="footer-text">
+               <p>© 2025 Prajwal L Chawda (Lip). Built with ❤️ and lots of ☕</p>
+            </div>
+            <div class="social-links">
+               <a href="https://github.com/brandy-build" target="_blank" class="social-link" title="GitHub">
+                  <i class="fab fa-github"></i>
+               </a>
+               <a href="https://www.linkedin.com/in/prajwal-l-chawda-9b4685254/" target="_blank" class="social-link"
+                  title="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+               </a>
+               <a href="mailto:chawda7prajwal@gmail.com" class="social-link" title="Email">
+                  <i class="fas fa-envelope"></i>
+               </a>
+            </div>
+         </div>
+         <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="command">exit</span>
+         </div>
+      </div>
+   </footer>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
