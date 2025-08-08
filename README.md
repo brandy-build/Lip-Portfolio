@@ -23,6 +23,7 @@ Professional portfolio showcasing cybersecurity expertise, Python development sk
 - **Contact Form** - Real-time submission with backend storage
 - **Analytics Tracking** - Page views and interaction monitoring
 - **Admin Dashboard** - Portfolio management interface
+- **Live Monitoring** - Real-time visitor tracking with alerts
 - **Project Showcase** - Interactive project cards with external links
 - **Skills Visualization** - Dynamic skill rating system
 
@@ -51,9 +52,11 @@ Professional portfolio showcasing cybersecurity expertise, Python development sk
 Lip-Portfolio/
 ├── index.html              # Main portfolio page
 ├── admin.html              # Admin dashboard
+├── monitor.html            # Live visitor monitoring
 ├── style.css               # Terminal-themed styling
 ├── script.js               # Interactive functionality
 ├── supabase-config.js      # Backend configuration
+├── notifications.js        # Real-time alert system
 ├── database-schema.sql     # Database setup
 ├── profile.jpeg            # Profile image
 ├── SUPABASE_SETUP.md       # Backend setup guide
@@ -70,6 +73,22 @@ Lip-Portfolio/
 3. **Skills** - Technical proficiencies with interactive ratings
 4. **Projects** - Showcase of cybersecurity and development work
 5. **Contact** - Real-time contact form with backend integration
+
+## 🔍 **Real-time Monitoring**
+
+### **Live Visitor Tracking**
+- **Monitor Dashboard** - `monitor.html` provides real-time visitor analytics
+- **Browser Notifications** - Instant alerts for contact form submissions
+- **Sound Alerts** - Audio notifications for new visitors
+- **Active User Count** - Track concurrent visitors
+- **Geographic Insights** - IP-based visitor location data
+
+### **Alert Systems**
+- **Contact Form Alerts** - Immediate notification when someone reaches out
+- **Visitor Activity** - Real-time page view tracking
+- **Project Interest** - Monitor which projects get the most attention
+- **Email Integration** - Webhook support for email notifications
+- **Discord/Slack** - Team messaging integration for important events
 
 ## 🛠️ **Setup & Development**
 
