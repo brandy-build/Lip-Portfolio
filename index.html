@@ -434,7 +434,7 @@
                   </div>
                </div>
                <div class="contact-form">
-                  <form class="terminal-form">
+                  <form action="https://formspree.io/f/xdkqzllr" method="POST" class="terminal-form">
                      <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -485,6 +485,11 @@
       </div>
    </footer>
 
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+   <script>
+      emailjs.init('EGnbD1hdd0z63wQLk');
+   </script>
+   <script src="script.js"></script>
 </body>
 
 </html>
